@@ -3,7 +3,24 @@ from os import walk
 from PIL import Image
 from os import walk
 
+'''
+Recuerda que vamos a tener varios archivos en el proyecto
+main.py que se encarga de crear la interfase donde se muestran las imagenes
+imagen.py donde es la clase de imagen
+clasificador.py que es el encargado de etiquetar las imagenes.
+En la clase clasificador debe existir un diccionario llamado categorias
+que contiene como llaves las diferentes etiquetas
+Categorias={"perritos":[1,34,653]}
 
+La lista de la categoria son los identificadores de las imagenes de esa categoria
+
+Las imagenes se almacenan en una lista que contiene la ruta de  cada imagen y su identificador.
+
+El directorio lo vamos a seleccionar desde la interfase de usuario (tkInter) y se lo vamos a pasar
+a nuestro clasificador.
+
+
+'''
 ruta_deimagenes = os.getcwd()  # obtiene ruta del crpeta
 contenido = os.listdir(ruta_deimagenes)
 print (contenido)
